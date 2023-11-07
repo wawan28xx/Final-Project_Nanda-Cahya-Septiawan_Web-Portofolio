@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    background-color: #053B50;
+    color: #EEEEEE;
+    flex-direction: column;
+    margin: 0;
+}
+
+.navbar-container {
+    max-width: 1300px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+.titlewelcome {
+    color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+}
+
+ .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+ .nav-list li {
+    list-style-type: none;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #EEEEEE;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+.navbar-container .nav-list li:hover a {
+    background-color: #64CCC5;
+    color: #053B50;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem 4rem;
+    max-width: 1600px;
+    width: 100%;
+    margin-inline: auto;
+    flex: 1;
+    gap: 1.5rem;
+    display: flex;
+    align-content: center;
+}
+
+main.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.content-description {
+    flex: 1 1;
+}
+
+.title {
+    font-size: 3.5rem;
+    margin-block: 10rem;
+    text-align: center;
+}
+
+main p {
+    line-height: 3rem;
+    font-size: 2.5rem;
+
+    text-align: center;
+}
+
+/*buat animasiin skill bar*/
+.processing, .processing2, .processing3, .processing4 {
+    background-color: #EEEEEE;
+    height: 50px;
+    width: 500px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.processing-bar {
+    background: linear-gradient(to left, #64CCC5, #176B87);
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 5px -5px #354449, 0 5px 5px #053B50;
+    transition: 1s ease;
+}
+
+.tombol-sosmed a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 50px;
+    width: 60px;
+    height: 60px;
+    color: #EEEEEE;
+    position: relative;
+    background-color: #053B50;
+    border-radius: 50em;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.tombol-sosmed a:hover {
+    background-color: #64CCC5;
+}
+
+aside {
+    flex: 1;
+    text-align: center;
+}
+
+footer {
+    background-color: #00a2c6;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-download {
+    font-size: 1.05rem;
+    font-weight: bold;
+    padding: .5rem;
+    border-radius: 999px;
+    background-color: #64CCC5;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 1000px) {
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main aside {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    main aside {
+        align-self: stretch;
+    }
+}
